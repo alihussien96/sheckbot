@@ -1,10 +1,12 @@
 import logging
 import requests
 import json
-from datetime import datetime, timedelta
 from telegram import Update, ReplyKeyboardMarkup, KeyboardButton
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes, ConversationHandler
 
+# 🔄 استيراد الإعدادات من ملف config
+from config import TELEGRAM_TOKEN, MOBILE_KEY, API_URL, WALLETS_CREDENTIALS
+from datetime import datetime, timedelta
 # ------------------- إعدادات الأمان -------------------
 TELEGRAM_TOKEN = "ضع_توكن_البوت_هنا" # 🔴 استبدله بتوكنك
 MOBILE_KEY = "fe9b67be-593c-11ee-8c99-0242ac120002"
